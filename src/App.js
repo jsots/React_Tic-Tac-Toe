@@ -2,6 +2,7 @@ import './App.css';
 import React, {useState} from "react";
 import {Board} from "./components/Board.js";
 import { Scoreboard } from './components/ScoreBoard.js';
+import { ResetButton } from './components/ResetButton.js';
 
 function App() {
   // Create the win conditions.
@@ -72,6 +73,7 @@ function App() {
     <div className="App">
       <Scoreboard scores = {scores} xTurn={xTurn} />
       <Board board={board} onClick={gameOver ? resetBoard : handleBoxClick}/>
+      <ResetButton resetBoard={resetBoard} />
     </div>
   );
 }
